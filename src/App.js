@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import { Home } from "./components/Home";
+import { Login } from "./components/Login";
+import { Logout } from "./components/Logout";
+import { NewOrder } from "./components/NewOrder";
+import { Orders } from "./components/Orders";
+import { ProtectedRoute } from "./components/ProtextedRoute";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>
+        <Link className="nav-home" to="/">
+          Home
+        </Link>
+        {/* Show either login or logout below */}
+        <Link className="nav-logout" to="/logout">
+          Logout
+        </Link>
+        <Link className="nav-login" to="/login">
+          Login
+        </Link>
+      </div>
+
+      <Routes>
+        {/* Routes are as follows:
+        Route      Component
+        /           Home
+        /login      Login
+        /logout     Logout
+        /orders     Orders    Protected
+        /neworder   NewOrder  Protected
+        */}
+      </Routes>
     </div>
   );
 }
