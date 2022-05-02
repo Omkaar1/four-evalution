@@ -23,7 +23,6 @@ function App() {
       </div>
 
       <Routes>
-        <Route></Route>
         {/* Routes are as follows:
         Route      Component
         /           Home
